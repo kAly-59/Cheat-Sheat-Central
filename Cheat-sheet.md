@@ -1,4 +1,4 @@
-# cheat-sheet
+# Cheat-sheet
 
 [HOW TO MARKDOWN] https://nodeschool.io
 
