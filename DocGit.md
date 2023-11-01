@@ -1,4 +1,4 @@
-### GIT :
+# GIT
 
 **Installation sur Linux :**
 ```
@@ -12,7 +12,7 @@ git config --global user.name "Votre Nom"
 git config --global user.email "votre@email.com"
 ```
 
-## COMMANDES :
+## COMMANDES
 
 1. **`git init` :**
    - *Fonctionnement :* Initialise un nouveau dépôt Git dans un répertoire existant.
