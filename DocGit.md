@@ -12,6 +12,8 @@ git config --global user.name "Votre Nom"
 git config --global user.email "votre@email.com"
 ```
 
+## COMMANDES :
+
 1. **`git init` :**
    - *Fonctionnement :* Initialise un nouveau dépôt Git dans un répertoire existant.
    - *Utilité :* Utilisé pour commencer un nouveau projet Git. Le répertoire devient un dépôt Git, prêt à enregistrer les modifications.
