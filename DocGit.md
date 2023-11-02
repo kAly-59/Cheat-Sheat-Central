@@ -12,12 +12,23 @@ git config --global user.name "Votre Nom"
 git config --global user.email "votre@email.com"
 ```
 ***  
+### TUTO
+
+1. Acceder au fichier :
+   ```code nom.du.fichier.md```
+2. ADD :
+   ``` git add nom.du.fichier.md ```
+3. COMMIT :
+   ```git commit -m "Information sur la/les modifications"```
+4. PUSH : 
+   ```git push origin main```
+
+***
+### Definitions
 
 - **Local :** Votre copie du dépôt sur votre machine locale.
 - **Origin :** Le dépôt distant à partir duquel vous avez cloné.
 - **Upstream :** Le dépôt distant original à partir duquel votre fork a été créé.
-
-***
 
 **Chiffrement Asymétrique :**
 - Le chiffrement asymétrique utilise deux clés distinctes :
@@ -25,8 +36,8 @@ git config --global user.email "votre@email.com"
    - *Une clé privée :* doit être gardée secrète. Cela élimine la nécessité d'un échange sécurisé de clés, mais les opérations de chiffrement et de déchiffrement sont généralement plus lentes que dans le chiffrement symétrique.
 
 ***
-# *SSH*
-(https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+## *SSH*
+https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 ```
  ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
@@ -44,7 +55,7 @@ ssh-add ~/.ssh/id_ed25519
 ```
 cat ~/.ssh/id_ed25519.pub
 ```
-# *Vérification des clés SSH existantes*
+### *Vérification des clés SSH existantes*
 https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
 ```
 ls -al ~/.ssh
@@ -52,7 +63,7 @@ ls -al ~/.ssh
 
 ***
 
-## Vérifier les Droits
+### Vérifier les Droits
 
 Pour vérifier les permissions d'un dossier sous Linux, utilisez la commande `ls -l` dans un terminal. Par exemple :
 
@@ -111,15 +122,3 @@ sudo chmod o+w /chemin/vers/DocForm
 10. **`git remote` :**
    - *Fonctionnement :* Gère les dépôts distants associés à votre projet local.
    - *Utilité :* Permet d'ajouter, afficher ou supprimer des dépôts distants. Vous pouvez également renommer ou mettre à jour les URL des dépôts distants avec cette commande.
-
-## TUTO
-
-1. Acceder au fichier :
-   ```code nom.du.fichier.md```
-2. ADD :
-   ``` git add nom.du.fichier.md ```
-3. COMMIT :
-   ```git commit -m "Information sur la/les modifications"```
-4. PUSH : 
-   ```git push origin main```
-
