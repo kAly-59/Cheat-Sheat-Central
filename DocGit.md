@@ -19,6 +19,15 @@ git config --global user.email "votre@email.com"
 
 ***
 
+**Chiffrement Asymétrique :**
+- Le chiffrement asymétrique utilise deux clés distinctes :
+   - *Une clé publique :* pour chiffrer les données et une clé privée correspondante pour les déchiffrer. La clé publique peut être partagée ou publiée largement.
+   - *Une clé privée :* doit être gardée secrète. Cela élimine la nécessité d'un échange sécurisé de clés, mais les opérations de chiffrement et de déchiffrement sont généralement plus lentes que dans le chiffrement symétrique.
+
+ ***
+
+ 
+
 ## COMMANDES
 
 1. **`git init` :**
