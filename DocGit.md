@@ -11,6 +11,13 @@ git --version
 git config --global user.name "Votre Nom"
 git config --global user.email "votre@email.com"
 ```
+***  
+
+- **Local :** Votre copie du dépôt sur votre machine locale.
+- **Origin :** Le dépôt distant à partir duquel vous avez cloné.
+- **Upstream :** Le dépôt distant original à partir duquel votre fork a été créé.
+
+***
 
 ## COMMANDES
 
@@ -45,3 +52,4 @@ git config --global user.email "votre@email.com"
 8. **`git remote` :**
    - *Fonctionnement :* Gère les dépôts distants associés à votre projet local.
    - *Utilité :* Permet d'ajouter, afficher ou supprimer des dépôts distants. Vous pouvez également renommer ou mettre à jour les URL des dépôts distants avec cette commande.
+     
