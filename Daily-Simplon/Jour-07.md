@@ -1,31 +1,31 @@
-# Objectifs journaliers Sas Dot-Net Roubaix Mai 2023
+ # Objectifs journaliers Sas Dot-Net Roubaix Mai 2023
 
 ## Mardi 31/10/2023
 
 ### Markdown
 
-- [ ] Préparer un README.md générique qui caresse la rétine (à réutiliser pour tous vos prochains repos)
-    - [ ] Voici un Awesome README : https://github.com/matiassingers/awesome-readme
+- [X] Préparer un README.md générique qui caresse la rétine (à réutiliser pour tous vos prochains repos)
+    - [X] Voici un Awesome README : https://github.com/matiassingers/awesome-readme
 
 ### Git
 
-- [ ] Installation et configuration de Git
-- [ ] Comprendre le concept de versionning
-- [ ] Comprendre le fonctionnement de Git
-    - [ ] Comprendre le staging de Git
-    - [ ] Comprendre le fonctionnent et l'utilité des commandes de bases de Git :
-        - [ ] git init
-        - [ ] git add
-        - [ ] git status
-        - [ ] git commit
-        - [ ] git pull
-        - [ ] git push
-        - [ ] git clone
-        - [ ] git remote
+- [X] Installation et configuration de Git (SUR PCF / A REFAIRE SUR PCP)
+- [X] Comprendre le concept de versionning
+- [X] Comprendre le fonctionnement de Git
+    - [X] Comprendre le staging de Git
+    - [X] Comprendre le fonctionnent et l'utilité des commandes de bases de Git :
+        - [X] git init
+        - [X] git add
+        - [X] git status
+        - [X] git commit
+        - [X] git pull
+        - [X] git push
+        - [X] git clone
+        - [X] git remote
 - [ ] Faire le parcours Git-it (Nodeschool.io)
-- [ ] Comprendre les termes "local", "origin" et "upstream"
-- [ ] Faire ses premiers commits sur les daily objectives (plusieurs commits par jour pour les débutants)
-- [ ] Faire ses premiers pushs des daily-objectives sur son compte Github
+- [X] Comprendre les termes "local", "origin" et "upstream"
+- [X] Faire ses premiers commits sur les daily objectives (plusieurs commits par jour pour les débutants)
+- [X] Faire ses premiers pushs des daily-objectives sur son compte Github
 
 ### Profiles Professionnels
 
