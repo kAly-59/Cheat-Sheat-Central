@@ -91,7 +91,7 @@ sudo chmod o+w /chemin/vers/DocForm
 
 2. **`git add` :** ( UNIQUE / . / ALL )
    - *Fonctionnement :* Ajoute des modifications spécifiques (ou tous les fichiers modifiés) à la staging area (zone de préparation).
-   - *Utilité :* Sélectionne les modifications à inclure dans le prochain commit. Peut ajouter des fichiers individuels (`git add nom_du_fichier`) ou tous les fichiers modifiés (`git add .`).
+   - *Utilité :* Sélectionne les modifications à inclure dans le prochain commit. Peut ajouter des fichiers individuels (`git add nom_du_fichier`) ou tous les fichiers modifiés (`git add all`).
 
 3. **`git status` :**
    - *Fonctionnement :* Affiche l'état des fichiers dans le répertoire de travail et de la staging area.
