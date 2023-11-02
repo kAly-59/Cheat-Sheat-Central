@@ -29,12 +29,12 @@
 
 ### Profiles Professionnels
 
-- [ ] Comprendre les attentes et modes de fonctionnement des recruteurs tech en 2023
+- [X] Comprendre les attentes et modes de fonctionnement des recruteurs tech en 2023
 
 #### Linkedin :
 
-- [ ] Création de compte Linkedin (si pas de compte)
-- [ ] Customiser son profile Linkedin pour "devenir la plus belle du village" :
+- [X] Création de compte Linkedin (si pas de compte)
+- [] Customiser son profile Linkedin pour "devenir la plus belle du village" :
     - [ ] Photo / Bannière
     - [ ] Titre
     - [ ] Bio
@@ -43,11 +43,11 @@
 
 #### Github
 
-- [ ] Création de compte Github
+- [X] Création de compte Github
 - [ ] Pimper son profile Github (belle du village)
-- [ ] Comprendre comment fonctionnent du chiffrement et des clés asymétriques
-  - [ ] Créer un tunnel SSH entre local et Github
-- [ ] Découvrir l'interface de Github :
+- [X] Comprendre comment fonctionnent du chiffrement et des clés asymétriques
+  - [X] Créer un tunnel SSH entre local et Github
+- [X] Découvrir l'interface de Github :
 - [ ] Pull Requests
 - [ ] Branches
 - [ ] Issues
