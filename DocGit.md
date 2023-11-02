@@ -26,13 +26,15 @@ git config --global user.email "votre@email.com"
 
  ***
 
- *Collez le texte ci-dessous, en remplaçant l’e-mail utilisé dans l’exemple par votre adresse e-mail GitHub.*
 ```
  ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
+
+*Démarrez l’agent SSH en arrière-plan.*
 ```
 eval "$(ssh-agent -s)"
 ```
+*Ajoutez votre clé privée SSH à ssh-agent.*
 ```
 ssh-add ~/.ssh/id_ed25519
 ```
