@@ -52,7 +52,25 @@ ls -al ~/.ssh
 
 ***
 
+## Vérifier les Droits
 
+Pour vérifier les permissions d'un dossier sous Linux, utilisez la commande `ls -l` dans un terminal. Par exemple :
+
+```bash
+ls -l /chemin/vers/le/dossier
+```
+
+Cette commande affichera une liste détaillée des fichiers et dossiers dans le répertoire spécifié, y compris les informations sur les permissions pour le propriétaire, le groupe et les autres utilisateurs.
+
+### Modifier les Droits
+
+Pour modifier les permissions d'un dossier sous Linux et permettre à tous les utilisateurs d'écrire dans le dossier `DocForm`, utilisez la commande `chmod` avec `sudo` pour ajouter la permission d'écriture pour les autres utilisateurs (`o+w`). Assurez-vous de remplacer `/chemin/vers/DocForm` par le chemin d'accès réel du dossier que vous souhaitez modifier. Par exemple :
+
+```bash
+sudo chmod o+w /chemin/vers/DocForm
+```
+
+***
 
 ## COMMANDES
 
