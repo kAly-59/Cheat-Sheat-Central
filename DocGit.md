@@ -24,8 +24,9 @@ git config --global user.email "votre@email.com"
    - *Une clé publique :* pour chiffrer les données et une clé privée correspondante pour les déchiffrer. La clé publique peut être partagée ou publiée largement.
    - *Une clé privée :* doit être gardée secrète. Cela élimine la nécessité d'un échange sécurisé de clés, mais les opérations de chiffrement et de déchiffrement sont généralement plus lentes que dans le chiffrement symétrique.
 
- ***
-
+***
+# *SSH*
+(https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 ```
  ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
@@ -38,11 +39,20 @@ eval "$(ssh-agent -s)"
 ```
 ssh-add ~/.ssh/id_ed25519
 ```
+*Ajout d’une nouvelle clé SSH à votre compte GitHub :*
+(https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+```
+cat ~/.ssh/id_ed25519.pub
+```
+# *Vérification des clés SSH existantes*
+https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
+```
+ls -al ~/.ssh
+```
+
 ***
 
 
-
- 
 
 ## COMMANDES
 
