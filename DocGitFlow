@@ -1,5 +1,3 @@
-Bien sûr, voici un tutoriel GitFlow en Markdown en français.
-
 ## GitFlow : Guide Complet
 
 GitFlow est un modèle de gestion de branches Git qui offre une méthode robuste pour organiser les différentes branches de votre dépôt Git. Il est particulièrement utile pour les projets logiciels complexes où de multiples fonctionnalités sont développées simultanément. Voici comment utiliser GitFlow dans votre projet :
