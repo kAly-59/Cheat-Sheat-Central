@@ -11,7 +11,9 @@ git --version
 git config --global user.name "Votre Nom"
 git config --global user.email "votre@email.com"
 ```
+
 ***  
+
 ### TUTO
 
 1. Acceder au fichier :
