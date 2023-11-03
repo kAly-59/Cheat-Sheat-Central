@@ -15,21 +15,38 @@ git config --global user.email "votre@email.com"
 ### TUTO
 
 1. Acceder au fichier :
-   ```code nom.du.fichier.md```
-2. ADD :
-   ``` git add nom.du.fichier.md ```
-3. COMMIT :
-   ```git commit -m "Information sur la/les modifications"```
-4. PUSH : 
-   ```git push origin main```
-5. REMOTE :
-   ```git remote add upstream "Lien GIT"```
-6. VERIFIER REMOTE
-   ```git remote -v ```
-7. FETSH
-   ```git fetch upstream```
-8. MERGE
-  ```git merge upstream/main```
+   ```
+   code nom.du.fichier.md
+   ```
+3. ADD :
+   ```
+   git add nom.du.fichier.md
+   ```
+5. COMMIT :
+   ```
+   git commit -m "Information sur la/les modifications"
+   ```
+6. PUSH : 
+   ```
+   git push origin main
+   ```
+7. REMOTE (Ajouter le dépôt distant upstream) :
+   ```
+   git remote add upstream "Lien GIT"
+   ```
+8. VERIFIER REMOTE :
+   ```
+   git remote -v
+   ```
+9. FETSH (Récupérer les dernières modifications depuis le dépôt original) :
+   ```
+   git fetch upstream
+   ```
+10. MERGE (Mettre à jour votre branche principale (habituellement main ou master) avec les modifications du dépôt original) :
+   ```
+   git checkout main
+   git merge upstream/main
+   ```
 
 ***
 ### Definitions
