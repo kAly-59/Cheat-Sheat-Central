@@ -51,6 +51,7 @@ git config --global user.email "votre@email.com"
    ```
 
 ***
+
 ### Definitions
 
 - **Local :** Votre copie du dépôt sur votre machine locale.
