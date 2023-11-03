@@ -22,6 +22,14 @@ git config --global user.email "votre@email.com"
    ```git commit -m "Information sur la/les modifications"```
 4. PUSH : 
    ```git push origin main```
+5. REMOTE :
+   ```git remote add upstream "Lien GIT"```
+6. VERIFIER REMOTE
+   ```git remote -v ```
+7. FETSH
+   ```git fetch upstream```
+8. MERGE
+  ```git merge upstream/main```
 
 ***
 ### Definitions
@@ -34,6 +42,10 @@ git config --global user.email "votre@email.com"
 - Le chiffrement asymétrique utilise deux clés distinctes :
    - *Une clé publique :* pour chiffrer les données et une clé privée correspondante pour les déchiffrer. La clé publique peut être partagée ou publiée largement.
    - *Une clé privée :* doit être gardée secrète. Cela élimine la nécessité d'un échange sécurisé de clés, mais les opérations de chiffrement et de déchiffrement sont généralement plus lentes que dans le chiffrement symétrique.
+
+**SemVer** https://www.conventionalcommits.org/fr/v1.0.0/
+   - Semantic Versioning (SemVer). SemVer est une convention de versionnement standardisée qui spécifie comment attribuer des numéros de version à un logiciel de manière significative.
+   - Une version est généralement représentée sous la forme de MAJOR.MINOR.PATCH.
 
 ***
 ## *SSH*
