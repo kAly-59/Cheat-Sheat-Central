@@ -47,7 +47,8 @@ git config --global user.email "votre@email.com"
 3. FETSH (Récupérer les dernières modifications depuis le dépôt original) :
    ```
    git pull upstream main 
-   (git fetch upstream + git merge)
+   git fetch upstream
+   git merge
    ```
 4. MERGE (Mettre à jour votre branche principale (habituellement main ou master) avec les modifications du dépôt original) :
    ```
