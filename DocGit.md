@@ -32,19 +32,24 @@ git config --global user.email "votre@email.com"
    ```
    git push origin main
    ```
-5. REMOTE (Ajouter le dépôt distant upstream) :
+
+   ***
+
+   
+1. REMOTE (Ajouter le dépôt distant upstream) :
    ```
    git remote add upstream "Lien GIT"
    ```
-6. VERIFIER REMOTE :
+2. VOIR LES REMOTE :
    ```
    git remote -v
    ```
-7. FETSH (Récupérer les dernières modifications depuis le dépôt original) :
+3. FETSH (Récupérer les dernières modifications depuis le dépôt original) :
    ```
-   git fetch upstream + git merge
+   git pull upstream main 
+   (git fetch upstream + git merge)
    ```
-8. MERGE (Mettre à jour votre branche principale (habituellement main ou master) avec les modifications du dépôt original) :
+4. MERGE (Mettre à jour votre branche principale (habituellement main ou master) avec les modifications du dépôt original) :
    ```
    git checkout main
    ```
