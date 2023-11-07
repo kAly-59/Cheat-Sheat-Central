@@ -1,169 +1,202 @@
 # GIT
 
-**Installation sur Linux :**
+## Installation et Configuration de Git (Linux) ##
+
+### 1. Installation sur Linux :
 ```
 sudo apt install git
 ```
 
-**Configuration de Git :**
+### 2. Mettre à jour Git (si nécessaire) :
+```
+sudo apt upgrade git
+sudo apt-get update # Exécuter si des problèmes de mise à jour sont rencontrés
+```
+
+### 3. Vérifier la version de Git installée :
 ```
 git --version
+```
+
+### 4. Configurer Git (Nom et Adresse Email) :
+```bash
 git config --global user.name "Votre Nom"
 git config --global user.email "votre@email.com"
 ```
 
 ***  
 
-### TUTO
+## Pousser des Modifications ##
 
-1. Acceder au fichier :
+### 1. Accéder au fichier :
    ```
    code nom.du.fichier.md
    ```
-2. ADD :
+
+### 2. Ajouter les modifications au suivi de Git avec `git add` :
    ```
    git add nom.du.fichier.md
    ```
-3. COMMIT :
+   Ou (Pour tout les fichiers)
+   ```
+   git add .
+   ```
+
+### 3. Effectuer un commit avec un message descriptif :
    ```
    git commit -m "Information sur la/les modifications"
    ```
-4. PUSH : 
+
+### 4. Pousser les modifications vers votre branche principale (`main`) sur GitHub :
    ```
    git push origin main
    ```
 
    ***
 
-   
-1. REMOTE (Ajouter le dépôt distant upstream) :
+## Mettre à jour un Fork GitHub ##
+
+### 1. Ajouter le dépôt source en tant que remote :
    ```
    git remote add upstream "Lien GIT"
    ```
-2. VOIR LES REMOTE :
+   Remplacez "Lien GIT" par l'URL du dépôt original (`upstream`), depuis lequel vous avez forké.
+
+### 2. Récupérer les dernières modifications depuis le dépôt original avec `git fetch` :
    ```
-   git remote -v
+   git fetch upstream
    ```
-3. FETSH (Récupérer les dernières modifications depuis le dépôt original) :
+   Ou
    ```
    git pull upstream main 
-   git fetch upstream
-   git merge
    ```
-4. MERGE (Mettre à jour votre branche principale (habituellement main ou master) avec les modifications du dépôt original) :
-   ```
-   git checkout main
-   ```
+
+### 3. Fusionner les modifications dans votre branche locale (par exemple, `main`) :
    ```
    git merge upstream/main
+   ```
+
+### 4. Pousser les modifications vers votre fork sur GitHub :
+   ```
+   git push origin main
+   ```
+
+### 5. Voir les remotes :
+   ```
+   git remote -v
    ```
    
 ***
 
-### Definitions
+**Définitions et Concepts Git**
 
-- **Local :** Votre copie du dépôt sur votre machine locale.
-- **Origin :** Le dépôt distant à partir duquel vous avez cloné.
-- **Upstream :** Le dépôt distant original à partir duquel votre fork a été créé.
+### **Local :**
+Votre copie du dépôt sur votre machine locale, où vous effectuez des modifications et travaillez sur votre code.
 
-**Chiffrement Asymétrique :**
-- Le chiffrement asymétrique utilise deux clés distinctes :
-   - *Une clé publique :* pour chiffrer les données et une clé privée correspondante pour les déchiffrer. La clé publique peut être partagée ou publiée largement.
-   - *Une clé privée :* doit être gardée secrète. Cela élimine la nécessité d'un échange sécurisé de clés, mais les opérations de chiffrement et de déchiffrement sont généralement plus lentes que dans le chiffrement symétrique.
+### **Origin :**
+Le dépôt distant à partir duquel vous avez cloné votre projet. C'est généralement votre fork personnel du dépôt original.
 
-**SemVer** https://www.conventionalcommits.org/fr/v1.0.0/
-   - Semantic Versioning (SemVer). SemVer est une convention de versionnement standardisée qui spécifie comment attribuer des numéros de version à un logiciel de manière significative.
-   - Une version est généralement représentée sous la forme de MAJOR.MINOR.PATCH.
+### **Upstream :**
+Le dépôt distant original à partir duquel votre fork a été créé. C'est le dépôt que vous souhaitez mettre à jour régulièrement avec les dernières modifications.
 
-**Fusion (Merge) :**
+### **Chiffrement Asymétrique :**
+Un système de chiffrement qui utilise deux clés distinctes : une clé publique pour chiffrer les données et une clé privée correspondante pour les déchiffrer. La clé publique peut être partagée, tandis que la clé privée doit être gardée secrète.
 
-La fusion est une méthode simple pour intégrer les modifications d'une branche dans une autre. Lorsque vous fusionnez une branche, vous combinez les modifications de la branche source dans la branche cible. Cela crée un nouveau commit de fusion qui représente l'état combiné des deux branches. La fusion préserve l'historique original des branches, en conservant les commits de chaque branche, ce qui permet de suivre clairement l'évolution du code.
+### **SemVer (Semantic Versioning) :**
+Une convention de versionnement standardisée qui spécifie comment attribuer des numéros de version à un logiciel de manière significative. Une version SemVer est généralement représentée sous la forme de MAJOR.MINOR.PATCH, indiquant des changements majeurs, mineurs et de correctifs respectivement.
 
-**Ré-ensemencement (Rebase) :**
+### **Fusion (Merge) :**
+La fusion est une méthode pour intégrer les modifications d'une branche dans une autre. Elle crée un nouveau commit de fusion qui représente l'état combiné des deux branches. La fusion préserve l'historique original des branches, ce qui permet de suivre l'évolution du code de manière détaillée.
 
-Le ré-ensemencement est une autre technique pour intégrer les modifications, mais il modifie l'historique des commits. Lorsque vous effectuez un ré-ensemencement, les commits de la branche source sont retirés de leur emplacement d'origine et appliqués un par un sur la branche cible. Cela crée une ligne d'historique linéaire et nette, sans les commits de fusion supplémentaires. Le ré-ensemencement peut rendre l'historique du projet plus facile à suivre, mais il peut également être risqué car il modifie l'historique existant et peut entraîner des conflits.
+### **Ré-ensemencement (Rebase) :**
+Le ré-ensemencement est une technique pour intégrer les modifications en modifiant l'historique des commits. Il retire les commits de la branche source de leur emplacement d'origine et les applique un par un sur la branche cible. Cela crée une ligne d'historique linéaire et nette, sans les commits de fusion supplémentaires. Le ré-ensemencement peut rendre l'historique du projet plus facile à suivre, mais il modifie l'historique existant et peut entraîner des conflits.
 
-En résumé, la fusion est généralement plus sécurisée et crée un historique plus complexe, tandis que le ré-ensemencement crée un historique plus linéaire et lisible, mais peut être risqué. Le choix entre les deux dépend des préférences de l'équipe et des exigences spécifiques du projet.
-
-***
-## *SSH*
-https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-```
- ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-
-*Démarrez l’agent SSH en arrière-plan.*
-```
-eval "$(ssh-agent -s)"
-```
-*Ajoutez votre clé privée SSH à ssh-agent.*
-```
-ssh-add ~/.ssh/id_ed25519
-```
-*Ajout d’une nouvelle clé SSH à votre compte GitHub :*
-(https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-```
-cat ~/.ssh/id_ed25519.pub
-```
-### *Vérification des clés SSH existantes*
-https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
-```
-ls -al ~/.ssh
-```
+En résumé, la fusion crée un historique plus complexe mais sécurisé, tandis que le ré-ensemencement crée un historique linéaire et lisible, mais peut être risqué en modifiant l'historique existant. Le choix entre les deux dépend des préférences de l'équipe et des exigences du projet spécifique.
 
 ***
 
-### Vérifier les Droits
+## Configuration SSH pour GitHub (Cheat Sheet) ##
 
-Pour vérifier les permissions d'un dossier sous Linux, utilisez la commande `ls -l` dans un terminal. Par exemple :
+### 1. **Générer une nouvelle clé SSH :**
+   ```
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
+   Remplacez `"your_email@example.com"` par votre adresse e-mail associée à votre compte GitHub.
 
-```bash
+### 2. **Démarrer l'agent SSH en arrière-plan :**
+   ```
+   eval "$(ssh-agent -s)"
+   ```
+
+### 3. **Ajouter votre clé privée SSH à ssh-agent :**
+   ```
+   ssh-add ~/.ssh/id_ed25519
+   ```
+
+### 4. **Ajouter une nouvelle clé SSH à votre compte GitHub :**
+   Suivez les instructions de GitHub pour ajouter votre clé SSH à votre compte :
+   - [Ajouter une nouvelle clé SSH à votre compte GitHub](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+### 5. **Vérifier les clés SSH existantes :**
+   ```
+   ls -al ~/.ssh
+   ```
+   Cette commande affiche les clés SSH existantes dans votre répertoire `~/.ssh`.
+
+Assurez-vous de suivre attentivement les instructions fournies par GitHub pour générer, ajouter et vérifier vos clés SSH. Cela garantira une connexion sécurisée entre votre machine locale et GitHub.
+
+***
+
+## Gestion des Permissions sur Linux (Cheat Sheet) ##
+
+### **Vérifier les Droits :**
+Pour vérifier les permissions d'un dossier sous Linux, utilisez la commande `ls -l` dans un terminal :
+```
 ls -l /chemin/vers/le/dossier
 ```
+Cette commande affiche une liste détaillée des fichiers et dossiers dans le répertoire spécifié, incluant les informations sur les permissions pour le propriétaire, le groupe et les autres utilisateurs.
 
-Cette commande affichera une liste détaillée des fichiers et dossiers dans le répertoire spécifié, y compris les informations sur les permissions pour le propriétaire, le groupe et les autres utilisateurs.
-
-### Modifier les Droits
-
-Pour modifier les permissions d'un dossier sous Linux et permettre à tous les utilisateurs d'écrire dans le dossier `DocForm`, utilisez la commande `chmod` avec `sudo` pour ajouter la permission d'écriture pour les autres utilisateurs (`o+w`). Assurez-vous de remplacer `/chemin/vers/DocForm` par le chemin d'accès réel du dossier que vous souhaitez modifier. Par exemple :
-
-```bash
+### **Modifier les Droits :**
+Pour modifier les permissions d'un dossier sous Linux et permettre à tous les utilisateurs d'écrire dans le dossier `DocForm`, utilisez `chmod` avec `sudo` pour ajouter la permission d'écriture pour les autres utilisateurs (`o+w`). Assurez-vous de remplacer `/chemin/vers/DocForm` par le chemin d'accès réel du dossier que vous souhaitez modifier :
+```
 sudo chmod o+w /chemin/vers/DocForm
 ```
 
+Assurez-vous d'utiliser ces commandes avec précaution, car la gestion incorrecte des permissions peut compromettre la sécurité de votre système.
+
 ***
 
-## COMMANDES
+## Commandes Git ##
 
 1. **`git init` :**
    - *Fonctionnement :* Initialise un nouveau dépôt Git dans un répertoire existant.
    - *Utilité :* Utilisé pour commencer un nouveau projet Git. Le répertoire devient un dépôt Git, prêt à enregistrer les modifications.
 
-2. **`git add` :** ( UNIQUE / . / ALL )
+2. **`git add` :** (UNIQUE / . / ALL)
    - *Fonctionnement :* Ajoute des modifications spécifiques (ou tous les fichiers modifiés) à la staging area (zone de préparation).
-   - *Utilité :* Sélectionne les modifications à inclure dans le prochain commit. Peut ajouter des fichiers individuels (`git add nom_du_fichier`) ou tous les fichiers modifiés (`git add all`).
+   - *Utilité :* Sélectionne les modifications à inclure dans le prochain commit. Peut ajouter des fichiers individuels (`git add nom_du_fichier`) ou tous les fichiers modifiés (`git add .` ou `git add --all`).
 
 3. **`git status` :**
    - *Fonctionnement :* Affiche l'état des fichiers dans le répertoire de travail et de la staging area.
-   - *Utilité :* Permet de voir les fichiers modifiés, ceux dans la staging area, et si tout est prêt pour le commit.
+   - *Utilité :* Permet de voir les fichiers modifiés, ceux dans la staging area et si tout est prêt pour le commit.
 
 4. **`git commit` :**
-      ```
-      git commit -m "Test"
+      ```bash
+      git commit -m "Message du commit"
       ```
    - *Fonctionnement :* Crée un nouveau commit avec les modifications de la staging area.
-   - *Utilité :* Enregistre les modifications dans l'historique du projet. Un message de commit (`-m "Message du commit"`) décrit les changements effectués.
+   - *Utilité :* Enregistre les modifications dans l'historique du projet. Le message de commit décrit les changements effectués.
 
 6. **`git pull` :**
    - *Fonctionnement :* Récupère les modifications depuis un dépôt distant et les fusionne dans votre branche actuelle.
    - *Utilité :* Met à jour votre copie locale avec les dernières modifications du dépôt distant.
 
 7. **`git push` :**
-      ```
-      git push origin main
+      ```bash
+      git push origin nom_de_la_branche
       ```
    - *Fonctionnement :* Envoie les commits locaux vers un dépôt distant.
-   - *Utilité :* Partage vos modifications avec les collaborateurs en poussant les commits vers le dépôt distant.
+   - *Utilité :* Partage vos modifications avec les collaborateurs en poussant les commits vers le dépôt distant. Remplacez `nom_de_la_branche` par le nom de votre branche.
 
 9. **`git clone` :**
    - *Fonctionnement :* Crée une copie locale d'un dépôt distant existant.
