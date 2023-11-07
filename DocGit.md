@@ -88,6 +88,24 @@ git config --global user.email "votre@email.com"
    
 ***
 
+**Installer GitHub CLI :**
+```
+sudo apt update
+sudo apt install gh
+```
+
+**Vérifier l'installation :**
+```
+gh --version
+```
+
+**S'authentifier avec votre compte GitHub :**
+```
+gh auth login
+```
+
+N'oubliez pas d'exécuter ces commandes dans un terminal sur votre système Ubuntu.
+
 **Définitions et Concepts Git**
 
 ### **Local :**
