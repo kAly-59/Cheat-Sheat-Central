@@ -75,6 +75,16 @@ git config --global user.email "votre@email.com"
    - Semantic Versioning (SemVer). SemVer est une convention de versionnement standardisée qui spécifie comment attribuer des numéros de version à un logiciel de manière significative.
    - Une version est généralement représentée sous la forme de MAJOR.MINOR.PATCH.
 
+**Fusion (Merge) :**
+
+La fusion est une méthode simple pour intégrer les modifications d'une branche dans une autre. Lorsque vous fusionnez une branche, vous combinez les modifications de la branche source dans la branche cible. Cela crée un nouveau commit de fusion qui représente l'état combiné des deux branches. La fusion préserve l'historique original des branches, en conservant les commits de chaque branche, ce qui permet de suivre clairement l'évolution du code.
+
+**Ré-ensemencement (Rebase) :**
+
+Le ré-ensemencement est une autre technique pour intégrer les modifications, mais il modifie l'historique des commits. Lorsque vous effectuez un ré-ensemencement, les commits de la branche source sont retirés de leur emplacement d'origine et appliqués un par un sur la branche cible. Cela crée une ligne d'historique linéaire et nette, sans les commits de fusion supplémentaires. Le ré-ensemencement peut rendre l'historique du projet plus facile à suivre, mais il peut également être risqué car il modifie l'historique existant et peut entraîner des conflits.
+
+En résumé, la fusion est généralement plus sécurisée et crée un historique plus complexe, tandis que le ré-ensemencement crée un historique plus linéaire et lisible, mais peut être risqué. Le choix entre les deux dépend des préférences de l'équipe et des exigences spécifiques du projet.
+
 ***
 ## *SSH*
 https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
