@@ -99,7 +99,7 @@ git flow innit
    ```
 ### 2. Récupérer les dernières modifications depuis le dépôt original avec `git fetch` :
    ```
-   git fetch upstream
+   git fetch origin "main"
    ```
    Ou
    ```
