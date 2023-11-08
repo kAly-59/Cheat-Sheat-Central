@@ -9,6 +9,7 @@
 8. [SSH pour GitHub](#SSH-pour-GitHub)
 
 ## 1. Installation Git
+
 ### 1. Installation
 ```
 sudo apt install git
@@ -91,7 +92,7 @@ git flow innit
 
    ***
 
-## Mettre à jour un Fork GitHub ##
+## Mettre à jour un Fork GitHub origin/upstream ##
 
 ### 1. Ajouter le dépôt source en tant que remote :
    ```
@@ -103,7 +104,7 @@ git flow innit
    ```
    Ou
    ```
-   git pull upstream main 
+   git fetch upstream "main" 
    ```
 ### 3. Fusionner les modifications dans votre branche locale (par exemple, `main`) :
    ```
@@ -111,37 +112,51 @@ git flow innit
    ```
 ### 4. Pousser les modifications vers votre fork sur GitHub :
    ```
-   git push origin main
+   git push origin "main"
    ```
+   ou
+   ```
+   git push upstream "main"
+   ```
+
 ### Voir les remotes :
    ```
    git remote -v
+   ```
+
+   ```
+   origin  git@github.com:kAly-59/cheat-sheets-github-cli.git (fetch)
+   origin  git@github.com:kAly-59/cheat-sheets-github-cli.git (push)
+   upstream        https://github.com/Simplon-hdf/cheat-sheets-github-cli.git (fetch)
+   upstream        https://github.com/Simplon-hdf/cheat-sheets-github-cli.git (push) #Upstream toujours en https
    ```
    
 ***
 
 ## GIT SWITCH ##
 
-###1. **Vérifier l'état actuel :**
+### 1. **Vérifier l'état actuel :**
    ```
    git status
    ```
 
-###2. **Lister les branches :**
+### 2. **Lister les branches :**
    ```
    git branch
    ```
 
-###3. **Changer de branche existante :**
+### 3. **Changer de branche existante :**
    ```
    git switch nom-de-la-branche
    ```
 
-###4. **Créer une nouvelle branche et y basculer (à partir d'une branche distante) :**
+### 4. **Créer une nouvelle branche et y basculer (à partir d'une branche distante) :**
    ```
    git switch -c nom-de-la-nouvelle-branche origin/nom-de-la-branche-distante
    ```
-   
+
+<br>
+
 ***
 
 ## SSH pour GitHub ##
@@ -167,6 +182,8 @@ git flow innit
    ```
    Cette commande affiche les clés SSH existantes dans votre répertoire `~/.ssh`.
 
+<br>
+
 ***
 
 ## Gestion des Permissions sur Linux ##
@@ -182,6 +199,8 @@ Pour modifier les permissions d'un dossier sous Linux et permettre à tous les u
 ```
 sudo chmod o+w /chemin/vers/DocForm
 ```
+
+<br>
 
 ***
 
@@ -209,6 +228,8 @@ La fusion est une méthode pour intégrer les modifications d'une branche dans u
 Le ré-ensemencement est une technique pour intégrer les modifications en modifiant l'historique des commits. Il retire les commits de la branche source de leur emplacement d'origine et les applique un par un sur la branche cible. Cela crée une ligne d'historique linéaire et nette, sans les commits de fusion supplémentaires. Le ré-ensemencement peut rendre l'historique du projet plus facile à suivre, mais il modifie l'historique existant et peut entraîner des conflits.
 
 En résumé, la fusion crée un historique plus complexe mais sécurisé, tandis que le ré-ensemencement crée un historique linéaire et lisible, mais peut être risqué en modifiant l'historique existant. Le choix entre les deux dépend des préférences de l'équipe et des exigences du projet spécifique.
+
+<br>
 
 ***
 
@@ -251,3 +272,7 @@ En résumé, la fusion crée un historique plus complexe mais sécurisé, tandis
 10. **`git remote` :**
    - *Fonctionnement :* Gère les dépôts distants associés à votre projet local.
    - *Utilité :* Permet d'ajouter, afficher ou supprimer des dépôts distants. Vous pouvez également renommer ou mettre à jour les URL des dépôts distants avec cette commande.
+
+   <br>
+
+***
