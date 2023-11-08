@@ -1,30 +1,70 @@
 # GIT
 
-## Installation et Configuration de Git (Linux) ##
+1. [Installation Git](#Installation-Git)
+2. [Installer GitHub CLI](#Installer-GitHub-CLI)
+3. [Installation Git Flow ](#Installation-Git-Flow)
+5. [Pousser des Modifications](#Pousser-des-Modifications)
+6. [Mettre à jour un Fork GitHub](#Mettre-à-jour-un-Fork-GitHub)
+7. [Git Switch](#Git-Switch)
+8. [SSH pour GitHub](#SSH-pour-GitHub)
 
-### 1. Installation sur Linux :
+## 1. Installation Git
+### 1. Installation
 ```
 sudo apt install git
 ```
-
-### 2. Mettre à jour Git (si nécessaire) :
+### 2. Mettre à jour
 ```
 sudo apt upgrade git
-sudo apt-get update # Exécuter si des problèmes de mise à jour sont rencontrés
+sudo apt-get update #Exécuter si des problèmes de mise à jour sont rencontrés
 ```
-
-### 3. Vérifier la version de Git installée :
+### 3. Configurer Git (Nom et Adresse Email)
+```
+git config --global user.name "Votre Nom"
+git config --global user.email "votre@email.com"
+```
+### Vérifier la version de Git installée
 ```
 git --version
 ```
 
-### 4. Configurer Git (Nom et Adresse Email) :
-```bash
-git config --global user.name "Votre Nom"
-git config --global user.email "votre@email.com"
+***  
+
+## Installer GitHub CLI ##
+
+### 1. **Installation :**
+```
+sudo apt update
+sudo apt install gh
+```
+### 2. **Vérifier l'installation :**
+```
+gh --version
+```
+### 3. **S'authentifier avec votre compte GitHub :**
+```
+gh auth login
 ```
 
-***  
+***
+
+## Installation Git Flow 
+
+### Install Git Flow via apt-get
+```
+sudo apt-get update
+sudo apt-get install git-flow
+```
+### Verify Git Flow installation
+```
+git flow version
+```
+### Initialisation
+```
+git flow innit
+```
+
+***
 
 ## Pousser des Modifications ##
 
@@ -32,7 +72,6 @@ git config --global user.email "votre@email.com"
    ```
    code nom.du.fichier.md
    ```
-
 ### 2. Ajouter les modifications au suivi de Git avec `git add` :
    ```
    git add nom.du.fichier.md
@@ -41,12 +80,10 @@ git config --global user.email "votre@email.com"
    ```
    git add .
    ```
-
 ### 3. Effectuer un commit avec un message descriptif :
    ```
    git commit -m "Information sur la/les modifications"
    ```
-
 ### 4. Pousser les modifications vers votre branche principale (`main`) sur GitHub :
    ```
    git push origin main
@@ -60,8 +97,6 @@ git config --global user.email "votre@email.com"
    ```
    git remote add upstream "Lien GIT"
    ```
-   Remplacez "Lien GIT" par l'URL du dépôt original (`upstream`), depuis lequel vous avez forké.
-
 ### 2. Récupérer les dernières modifications depuis le dépôt original avec `git fetch` :
    ```
    git fetch upstream
@@ -70,43 +105,87 @@ git config --global user.email "votre@email.com"
    ```
    git pull upstream main 
    ```
-
 ### 3. Fusionner les modifications dans votre branche locale (par exemple, `main`) :
    ```
    git merge upstream/main
    ```
-
 ### 4. Pousser les modifications vers votre fork sur GitHub :
    ```
    git push origin main
    ```
-
-### 5. Voir les remotes :
+### Voir les remotes :
    ```
    git remote -v
    ```
    
 ***
 
-**Installer GitHub CLI :**
+## GIT SWITCH ##
+
+###1. **Vérifier l'état actuel :**
+   ```
+   git status
+   ```
+
+###2. **Lister les branches :**
+   ```
+   git branch
+   ```
+
+###3. **Changer de branche existante :**
+   ```
+   git switch nom-de-la-branche
+   ```
+
+###4. **Créer une nouvelle branche et y basculer (à partir d'une branche distante) :**
+   ```
+   git switch -c nom-de-la-nouvelle-branche origin/nom-de-la-branche-distante
+   ```
+   
+***
+
+## SSH pour GitHub ##
+
+### 1. **Générer une nouvelle clé SSH :**
+   ```
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
+### 2. **Démarrer l'agent SSH en arrière-plan :**
+   ```
+   eval "$(ssh-agent -s)"
+   ```
+### 3. **Ajouter votre clé privée SSH à ssh-agent :**
+   ```
+   ssh-add ~/.ssh/id_ed25519
+   ```
+### 4. **Ajouter une nouvelle clé SSH à votre compte GitHub :**
+   Suivez les instructions de GitHub pour ajouter votre clé SSH à votre compte :
+   - [Ajouter une nouvelle clé SSH à votre compte GitHub](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+### **Vérifier les clés SSH existantes :**
+   ```
+   ls -al ~/.ssh
+   ```
+   Cette commande affiche les clés SSH existantes dans votre répertoire `~/.ssh`.
+
+***
+
+## Gestion des Permissions sur Linux ##
+
+### **Vérifier les Droits :**
+Pour vérifier les permissions d'un dossier sous Linux, utilisez la commande `ls -l` dans un terminal :
 ```
-sudo apt update
-sudo apt install gh
+ls -l /chemin/vers/le/dossier
 ```
 
-**Vérifier l'installation :**
+### **Modifier les Droits :**
+Pour modifier les permissions d'un dossier sous Linux et permettre à tous les utilisateurs d'écrire dans le dossier `DocForm`, utilisez `chmod` avec `sudo` pour ajouter la permission d'écriture pour les autres utilisateurs (`o+w`). Assurez-vous de remplacer `/chemin/vers/DocForm` par le chemin d'accès réel du dossier que vous souhaitez modifier :
 ```
-gh --version
-```
-
-**S'authentifier avec votre compte GitHub :**
-```
-gh auth login
+sudo chmod o+w /chemin/vers/DocForm
 ```
 
-N'oubliez pas d'exécuter ces commandes dans un terminal sur votre système Ubuntu.
+***
 
-**Définitions et Concepts Git**
+## Définitions et Concepts Git ##
 
 ### **Local :**
 Votre copie du dépôt sur votre machine locale, où vous effectuez des modifications et travaillez sur votre code.
@@ -133,57 +212,6 @@ En résumé, la fusion crée un historique plus complexe mais sécurisé, tandis
 
 ***
 
-## Configuration SSH pour GitHub (Cheat Sheet) ##
-
-### 1. **Générer une nouvelle clé SSH :**
-   ```
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   ```
-   Remplacez `"your_email@example.com"` par votre adresse e-mail associée à votre compte GitHub.
-
-### 2. **Démarrer l'agent SSH en arrière-plan :**
-   ```
-   eval "$(ssh-agent -s)"
-   ```
-
-### 3. **Ajouter votre clé privée SSH à ssh-agent :**
-   ```
-   ssh-add ~/.ssh/id_ed25519
-   ```
-
-### 4. **Ajouter une nouvelle clé SSH à votre compte GitHub :**
-   Suivez les instructions de GitHub pour ajouter votre clé SSH à votre compte :
-   - [Ajouter une nouvelle clé SSH à votre compte GitHub](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-
-### 5. **Vérifier les clés SSH existantes :**
-   ```
-   ls -al ~/.ssh
-   ```
-   Cette commande affiche les clés SSH existantes dans votre répertoire `~/.ssh`.
-
-Assurez-vous de suivre attentivement les instructions fournies par GitHub pour générer, ajouter et vérifier vos clés SSH. Cela garantira une connexion sécurisée entre votre machine locale et GitHub.
-
-***
-
-## Gestion des Permissions sur Linux (Cheat Sheet) ##
-
-### **Vérifier les Droits :**
-Pour vérifier les permissions d'un dossier sous Linux, utilisez la commande `ls -l` dans un terminal :
-```
-ls -l /chemin/vers/le/dossier
-```
-Cette commande affiche une liste détaillée des fichiers et dossiers dans le répertoire spécifié, incluant les informations sur les permissions pour le propriétaire, le groupe et les autres utilisateurs.
-
-### **Modifier les Droits :**
-Pour modifier les permissions d'un dossier sous Linux et permettre à tous les utilisateurs d'écrire dans le dossier `DocForm`, utilisez `chmod` avec `sudo` pour ajouter la permission d'écriture pour les autres utilisateurs (`o+w`). Assurez-vous de remplacer `/chemin/vers/DocForm` par le chemin d'accès réel du dossier que vous souhaitez modifier :
-```
-sudo chmod o+w /chemin/vers/DocForm
-```
-
-Assurez-vous d'utiliser ces commandes avec précaution, car la gestion incorrecte des permissions peut compromettre la sécurité de votre système.
-
-***
-
 ## Commandes Git ##
 
 1. **`git init` :**
@@ -199,7 +227,7 @@ Assurez-vous d'utiliser ces commandes avec précaution, car la gestion incorrect
    - *Utilité :* Permet de voir les fichiers modifiés, ceux dans la staging area et si tout est prêt pour le commit.
 
 4. **`git commit` :**
-      ```bash
+      ```
       git commit -m "Message du commit"
       ```
    - *Fonctionnement :* Crée un nouveau commit avec les modifications de la staging area.
@@ -210,7 +238,7 @@ Assurez-vous d'utiliser ces commandes avec précaution, car la gestion incorrect
    - *Utilité :* Met à jour votre copie locale avec les dernières modifications du dépôt distant.
 
 7. **`git push` :**
-      ```bash
+      ```
       git push origin nom_de_la_branche
       ```
    - *Fonctionnement :* Envoie les commits locaux vers un dépôt distant.
