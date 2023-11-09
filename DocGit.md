@@ -8,18 +8,18 @@
 7. [Git Switch](#Git-Switch)
 8. [SSH pour GitHub](#SSH-pour-GitHub)
 
-## 1. Installation Git
+## Installation Git
 
-### 1. Installation
+### Installation
 ```
 sudo apt install git
 ```
-### 2. Mettre à jour
+### Mettre à jour
 ```
 sudo apt upgrade git
 sudo apt-get update #Exécuter si des problèmes de mise à jour sont rencontrés
 ```
-### 3. Configurer Git (Nom et Adresse Email)
+### Configurer Git (Nom et Adresse Email)
 ```
 git config --global user.name "Votre Nom"
 git config --global user.email "votre@email.com"
@@ -28,26 +28,29 @@ git config --global user.email "votre@email.com"
 ```
 git --version
 ```
+<br>
 
 ***  
 
 ## Installer GitHub CLI ##
 
-### 1. **Installation :**
+### **Installation :**
 ```
 sudo apt update
 sudo apt install gh
 ```
-### 2. **Vérifier l'installation :**
+### **Vérifier l'installation :**
 ```
 gh --version
 ```
-### 3. **S'authentifier avec votre compte GitHub :**
+### **S'authentifier avec votre compte GitHub :**
 ```
 gh auth login
 ```
 
-***
+<br>
+
+*** 
 
 ## Installation Git Flow 
 
@@ -101,39 +104,35 @@ git flow innit
 ### 2. Récupérer les dernières modifications depuis le dépôt original avec `git fetch` :
    ```
    git fetch origin "main"
-   ```
-   Ou
-   ```
    git fetch upstream "main" 
    ```
 ### 3. Fusionner les modifications dans votre branche locale (par exemple, `main`) :
    ```
+   git fetch origin "main"
    git merge upstream/main
    ```
 ### 4. Pousser les modifications vers votre fork sur GitHub :
    ```
    git push origin "main"
    ```
-   ou
-   ```
-   git push upstream "main"
-   ```
 
 ### Voir les remotes :
    ```
    git remote -v
    ```
-
+Exemple :
    ```
    origin  git@github.com:kAly-59/cheat-sheets-github-cli.git (fetch)
    origin  git@github.com:kAly-59/cheat-sheets-github-cli.git (push)
    upstream        https://github.com/Simplon-hdf/cheat-sheets-github-cli.git (fetch)
    upstream        https://github.com/Simplon-hdf/cheat-sheets-github-cli.git (push) #Upstream toujours en https
    ```
-   
+
+<br>
+
 ***
 
-## GIT SWITCH ##
+## GIT SWITCH
 
 ### 1. **Vérifier l'état actuel :**
    ```
@@ -273,6 +272,6 @@ En résumé, la fusion crée un historique plus complexe mais sécurisé, tandis
    - *Fonctionnement :* Gère les dépôts distants associés à votre projet local.
    - *Utilité :* Permet d'ajouter, afficher ou supprimer des dépôts distants. Vous pouvez également renommer ou mettre à jour les URL des dépôts distants avec cette commande.
 
-   <br>
+<br>
 
 ***
