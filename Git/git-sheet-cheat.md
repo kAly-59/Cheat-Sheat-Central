@@ -1,13 +1,5 @@
 # GIT
 
-1. [Installation Git](#Installation-Git)
-2. [Installer GitHub CLI](#Installer-GitHub-CLI)
-3. [Installation Git Flow ](#Installation-Git-Flow)
-5. [Pousser des Modifications](#Pousser-des-Modifications)
-6. [Mettre à jour un Fork GitHub](#Mettre-à-jour-un-Fork-GitHub)
-7. [Git Switch](#Git-Switch)
-8. [SSH pour GitHub](#SSH-pour-GitHub)
-
 ## Installation Git
 
 ### Installation
@@ -28,47 +20,10 @@ git config --global user.email "votre@email.com"
 ```
 git --version
 ```
+
 <br>
 
 ***  
-
-## Installer GitHub CLI ##
-
-### **Installation :**
-```
-sudo apt update
-sudo apt install gh
-```
-### **Vérifier l'installation :**
-```
-gh --version
-```
-### **S'authentifier avec votre compte GitHub :**
-```
-gh auth login
-```
-
-<br>
-
-*** 
-
-## Installation Git Flow 
-
-### Install Git Flow via apt-get
-```
-sudo apt-get update
-sudo apt-get install git-flow
-```
-### Verify Git Flow installation
-```
-git flow version
-```
-### Initialisation
-```
-git flow innit
-```
-
-***
 
 ## Pousser des Modifications ##
 
@@ -95,27 +50,29 @@ git flow innit
 
    ***
 
+<br>
+
+*** 
+
 ## Mettre à jour un Fork GitHub origin/upstream ##
 
-### 1. Ajouter le dépôt source en tant que remote :
+### 1. Ajouter/Modifier le dépôt source en tant que remote :
    ```
-   git remote add upstream "Lien GIT"
+   git remote add origin/upstream "Lien GIT"
    ```
 ### 2. Récupérer les dernières modifications depuis le dépôt original avec `git fetch` :
    ```
-   git fetch origin "main"
-   git fetch upstream "main" 
+   git fetch origin/upstream "branch"
+    
    ```
 ### 3. Fusionner les modifications dans votre branche locale (par exemple, `main`) :
    ```
-   git fetch origin "main"
-   git merge upstream/main
+   git merge origin/upstream "branch"
    ```
 ### 4. Pousser les modifications vers votre fork sur GitHub :
    ```
-   git push origin "main"
+   git push origin "branch"
    ```
-
 ### Voir les remotes :
    ```
    git remote -v
@@ -153,51 +110,6 @@ Exemple :
    ```
    git switch -c nom-de-la-nouvelle-branche origin/nom-de-la-branche-distante
    ```
-
-<br>
-
-***
-
-## SSH pour GitHub ##
-
-### 1. **Générer une nouvelle clé SSH :**
-   ```
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   ```
-### 2. **Démarrer l'agent SSH en arrière-plan :**
-   ```
-   eval "$(ssh-agent -s)"
-   ```
-### 3. **Ajouter votre clé privée SSH à ssh-agent :**
-   ```
-   ssh-add ~/.ssh/id_ed25519
-   ```
-### 4. **Ajouter une nouvelle clé SSH à votre compte GitHub :**
-   Suivez les instructions de GitHub pour ajouter votre clé SSH à votre compte :
-   - [Ajouter une nouvelle clé SSH à votre compte GitHub](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-### **Vérifier les clés SSH existantes :**
-   ```
-   ls -al ~/.ssh
-   ```
-   Cette commande affiche les clés SSH existantes dans votre répertoire `~/.ssh`.
-
-<br>
-
-***
-
-## Gestion des Permissions sur Linux ##
-
-### **Vérifier les Droits :**
-Pour vérifier les permissions d'un dossier sous Linux, utilisez la commande `ls -l` dans un terminal :
-```
-ls -l /chemin/vers/le/dossier
-```
-
-### **Modifier les Droits :**
-Pour modifier les permissions d'un dossier sous Linux et permettre à tous les utilisateurs d'écrire dans le dossier `DocForm`, utilisez `chmod` avec `sudo` pour ajouter la permission d'écriture pour les autres utilisateurs (`o+w`). Assurez-vous de remplacer `/chemin/vers/DocForm` par le chemin d'accès réel du dossier que vous souhaitez modifier :
-```
-sudo chmod o+w /chemin/vers/DocForm
-```
 
 <br>
 
