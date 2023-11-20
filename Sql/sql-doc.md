@@ -12,7 +12,7 @@
 5- Find all the information about each film
 ``SELECT * FROM movies;``
 
-## EXO 2
+## EXO 2:
 1- Find the movie with a row id of 6
 ``SELECT * FROM movies WHERE id = 6;``
 2- Find the movies released in the years between 2000 and 2010
@@ -22,7 +22,7 @@
 4- Find the first 5 Pixar movies and their release year
 ``SELECT * FROM movies WHERE year LIMIT 5;``
 
-## EXO 3
+## EXO 3:
 1- Find all the Toy Story movies
 ``SELECT title FROM movies WHERE title LIKE "Toy Story%";``
 2- Find all the movies directed by John Lasseter
@@ -41,3 +41,18 @@
 ``SELECT title, year FROM movies ORDER BY title ASC LIMIT 5``
 4- List the next five Pixar movies sorted alphabetically
 ``SELECT title, year FROM movies ORDER BY title LIMIT 5 OFFSET 5;``
+
+## Review 1 — Tasks:
+1- List all the Canadian cities and their populations
+``SELECT Country, City, Population FROM north_american_cities WHERE Country LIKE "Canada"``
+2- Order all the cities in the United States by their latitude from north to south
+``SELECT Country, City, latitude, longitude FROM north_american_cities WHERE Country LIKE "United States" ORDER BY Latitude ASC ``
+3- List all the cities west of Chicago, ordered from west to east
+``SELECT City FROM north_american_cities WHERE Longitude < -87.629798 ORDER BY Longitude``
+4- List the two largest cities in Mexico (by population)
+``SELECT Country, City, Population FROM north_american_cities WHERE Country LIKE "Mexico" Order BY Population DESC LIMIT 2``
+5- List the third and fourth largest cities (by population) in the United States and their population
+SELECT Country, City, Population
+FROM north_american_cities 
+WHERE Country LIKE "United States"
+Order BY Population ASC
