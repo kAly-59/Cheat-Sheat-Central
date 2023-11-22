@@ -180,3 +180,8 @@
 2- And drop the BoxOffice table as well
 `` DROP TABLE IF EXISTS Boxoffice ; ``
 
+<br>
+
+---
+
+<br>
