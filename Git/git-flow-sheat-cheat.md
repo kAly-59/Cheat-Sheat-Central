@@ -1,4 +1,4 @@
-# GitFlow Doc
+# GitFlow S
 
 ## Install Git Flow via apt-get
 ```
