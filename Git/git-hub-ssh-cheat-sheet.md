@@ -23,4 +23,3 @@
    ```
    ls -al ~/.ssh
    ```
-   Cette commande affiche les clés SSH existantes dans votre répertoire `~/.ssh`.
