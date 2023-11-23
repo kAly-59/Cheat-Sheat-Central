@@ -20,10 +20,7 @@ git config --global user.email "votre@email.com"
 ```
 git --version
 ```
-
-<br>
-
-***  
+---
 
 ## Pousser des Modifications ##
 
@@ -48,11 +45,7 @@ git --version
    git push origin main
    ```
 
-   ***
-
-<br>
-
-*** 
+---
 
 ## Mettre à jour un Fork GitHub origin/upstream ##
 
@@ -85,9 +78,7 @@ Exemple :
    upstream        https://github.com/Simplon-hdf/cheat-sheets-github-cli.git (push) #Upstream toujours en https
    ```
 
-<br>
-
-***
+---
 
 ## GIT SWITCH
 
@@ -111,38 +102,7 @@ Exemple :
    git switch -c nom-de-la-nouvelle-branche origin/nom-de-la-branche-distante
    ```
 
-<br>
-
-***
-
-## Définitions et Concepts Git ##
-
-### **Local :**
-Votre copie du dépôt sur votre machine locale, où vous effectuez des modifications et travaillez sur votre code.
-
-### **Origin :**
-Le dépôt distant à partir duquel vous avez cloné votre projet. C'est généralement votre fork personnel du dépôt original.
-
-### **Upstream :**
-Le dépôt distant original à partir duquel votre fork a été créé. C'est le dépôt que vous souhaitez mettre à jour régulièrement avec les dernières modifications.
-
-### **Chiffrement Asymétrique :**
-Un système de chiffrement qui utilise deux clés distinctes : une clé publique pour chiffrer les données et une clé privée correspondante pour les déchiffrer. La clé publique peut être partagée, tandis que la clé privée doit être gardée secrète.
-
-### **SemVer (Semantic Versioning) :**
-Une convention de versionnement standardisée qui spécifie comment attribuer des numéros de version à un logiciel de manière significative. Une version SemVer est généralement représentée sous la forme de MAJOR.MINOR.PATCH, indiquant des changements majeurs, mineurs et de correctifs respectivement.
-
-### **Fusion (Merge) :**
-La fusion est une méthode pour intégrer les modifications d'une branche dans une autre. Elle crée un nouveau commit de fusion qui représente l'état combiné des deux branches. La fusion préserve l'historique original des branches, ce qui permet de suivre l'évolution du code de manière détaillée.
-
-### **Ré-ensemencement (Rebase) :**
-Le ré-ensemencement est une technique pour intégrer les modifications en modifiant l'historique des commits. Il retire les commits de la branche source de leur emplacement d'origine et les applique un par un sur la branche cible. Cela crée une ligne d'historique linéaire et nette, sans les commits de fusion supplémentaires. Le ré-ensemencement peut rendre l'historique du projet plus facile à suivre, mais il modifie l'historique existant et peut entraîner des conflits.
-
-En résumé, la fusion crée un historique plus complexe mais sécurisé, tandis que le ré-ensemencement crée un historique linéaire et lisible, mais peut être risqué en modifiant l'historique existant. Le choix entre les deux dépend des préférences de l'équipe et des exigences du projet spécifique.
-
-<br>
-
-***
+---
 
 ## Commandes Git ##
 
@@ -184,6 +144,4 @@ En résumé, la fusion crée un historique plus complexe mais sécurisé, tandis
    - *Fonctionnement :* Gère les dépôts distants associés à votre projet local.
    - *Utilité :* Permet d'ajouter, afficher ou supprimer des dépôts distants. Vous pouvez également renommer ou mettre à jour les URL des dépôts distants avec cette commande.
 
-<br>
-
-***
+---
