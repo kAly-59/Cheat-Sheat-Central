@@ -1,4 +1,4 @@
-# SSH pour GitHub ##
+# Git Hub SSH Sheat Cheat ##
 
 ### 1. **Générer une nouvelle clé SSH :**
    ```
