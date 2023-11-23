@@ -11,14 +11,14 @@ function evenOrOdd(number) {
 }
 ```
 
-//2. Multiply
+### 2. Multiply
+```javascript
 function multiply(a, b) {
     return a * b
 }
 ```
 
 ### 3. Convert a Number to a String!
-
 ```javascript
 function numberToString(num) {
     return num.toString();
@@ -26,7 +26,6 @@ function numberToString(num) {
 ```
 
 ### 4. Opposite number
-
 ```javascript
 function opposite(number) {
     return -number;
@@ -34,7 +33,6 @@ function opposite(number) {
 ```
 
 ### 5. Reversed Strings
-
 ```javascript
 function solution(str) {
     return str.split("").reverse().join("");
@@ -42,7 +40,6 @@ function solution(str) {
 ```
 
 ### 6. Return Negative
-
 ```javascript
 function makeNegative(num) {
     return num = -Math.abs(num);
@@ -50,7 +47,6 @@ function makeNegative(num) {
 ```
 
 ### 7. Convert boolean values to strings 'Yes' or 'No'.
-
 ```javascript
 function boolToWord(bool) {
     if (bool == 'true')
