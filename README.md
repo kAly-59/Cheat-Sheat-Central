@@ -4,9 +4,9 @@
 
 ## Git
 - [Git Cheat Sheet](#github-sheet-cheat.md)
-- [GitFlow Documentation](#git-flow-sheat-cheat.md)
-- [GitHub CLI Documentation](#git-hub-cli-sheat-cheat.md)
-- [GitHub SSH Documentation](#git-hub-ssh-sheat-cheat.md)
+- [GitFlow Cheat Sheet](#git-flow-sheat-cheat.md)
+- [GitHub CLI Cheat Sheet](#git-hub-cli-sheat-cheat.md)
+- [GitHub SSH Cheat Sheet](#git-hub-ssh-sheat-cheat.md)
 
 ---
 
