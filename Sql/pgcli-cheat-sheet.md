@@ -1,4 +1,4 @@
-# PG CLI 
+# PG CLI Cheat Sheet
 
 ## Installation
 
