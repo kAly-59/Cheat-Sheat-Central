@@ -1,4 +1,4 @@
-# GitFlow S
+# GitFlow Sheat Cheat
 
 ## Install Git Flow via apt-get
 ```
