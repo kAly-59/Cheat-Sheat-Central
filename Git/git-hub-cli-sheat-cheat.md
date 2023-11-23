@@ -1,4 +1,4 @@
-# Installer GitHub CLI ##
+# GitHub CLI Sheat Cheat
 
 ### **Installation :**
 ```
