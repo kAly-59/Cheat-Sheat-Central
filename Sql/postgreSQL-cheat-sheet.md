@@ -1,40 +1,41 @@
 # PostgreSQL Cheat Sheet
 
-## Installation de PostgreSQL sur Ubuntu
+## Installation (Ubuntu)
 
-1. Ouvrez votre terminal WSL.
-2. Mettez à jour vos paquets Ubuntu : 
-    ```bash
-    sudo apt update
-    ```
-3. Installez PostgreSQL (et le paquet -contrib qui a quelques utilitaires utiles) avec : 
-    ```bash
-    sudo apt install postgresql postgresql-contrib
-    ```
-4. Confirmez l'installation et obtenez le numéro de version : 
-    ```bash
-    psql --version
-    ```
+**Mettez à jour vos paquets Ubuntu :**
+```bash
+sudo apt update
+```
+**Installez PostgreSQL (et le paquet -contrib qui a quelques utilitaires utiles) avec :**
+```bash
+sudo apt install postgresql postgresql-contrib
+```
+**Numéro de version :**
+```bash
+psql --version
+```
 
-**Après votre première installation, et chaque fois que vous redémarrez votre machine, vous devrez également redémarrer le service postgres, sinon vous obtiendrez une erreur 'Le serveur est-il en cours d'exécution ?'.**
+***Chaque fois que vous redémarrez votre machine, vous devrez également redémarrer le service postgres.***
 
-5. Démarrez votre service postgres : 
-    ```bash
-    sudo service postgresql start
-    ```
-6. Connectez-vous au service postgres et ouvrez le shell psql : 
-    ```bash 
-    sudo -u postgres psql
-    ```
-7. Vous verrez votre ligne de commande changer pour ressembler à ceci : 
-    ```sql
-    postgres=#
-    ```
-8. L'utilisateur admin par défaut, postgres, a besoin d'un mot de passe assigné pour se connecter à une base de données. Pour définir un mot de passe : 
-    ```sql
-    \password postgres
-    ```
-    Vous obtiendrez une invite pour entrer votre nouveau mot de passe. Fermez et rouvrez votre terminal.
+**Démarrez votre service postgres :** 
+```bash
+sudo service postgresql start
+```
+
+**Connectez-vous au service postgres et ouvrez le shell psql :**
+```bash 
+sudo -u postgres psql
+```
+
+**Vous verrez votre ligne de commande changer pour ressembler à ceci :** 
+```sql
+postgres=#
+```
+
+**L'utilisateur admin par défaut, postgres, a besoin d'un mot de passe assigné pour se connecter à une base de données. Pour définir un mot de passe :** 
+```sql
+\password postgres
+```
 
 <br>
 
@@ -44,18 +45,20 @@
 
 ## Création & suppression base de données
 
-1. Pour voir quelles bases de données vous avez disponibles, dans l'invite MySQL, entrez : 
-    ```sql
-    \l
-    ```
-2. Pour créer une nouvelle base de données, entrez : 
-    ```sql
-    CREATE DATABASE nom_de_la_base_de_donnees;
-    ```
-3. Pour supprimer une base de données, entrez : 
-    ```sql
-    DROP DATABASE nom_de_la_base_de_donnees;
-    ```
+**Créer une nouvelle base de données, entrez :**
+```sql
+CREATE DATABASE nom_de_la_base_de_donnees;
+```
+
+**Supprimer une base de données, entrez :**
+```sql
+DROP DATABASE nom_de_la_base_de_donnees;
+```
+
+**Voir bases de données :**
+```sql
+\l
+```
 
 <br>
 
@@ -65,25 +68,45 @@
 
 ## Création & suppression compte utilisateur
 
-1. Ouvrez une fenêtre de terminal.
-2. Connectez-vous à PostgreSQL :
-    ```bash 
-    sudo -u postgres psql
-    ```
-3. Créer un nouvel utilisateur, `CREATE USER` :
-    ```sql
-    CREATE USER nom_utilisateur WITH PASSWORD 'mot_de_passe';
-    ```
-4. Supprimer un utilisateur, `DROP USER` :
-    ```sql
-    DROP USER nom_utilisateur;
-    ```
-5. Voir les utilisateurs :
-    ```sql
-    \du
-    ```
+**Créer un nouvel utilisateur, `CREATE USER` :**
+```sql
+CREATE USER nom_utilisateur WITH PASSWORD 'mot_de_passe';
+```
 
-**Note :** Assurez-vous d'avoir les privilèges nécessaires pour créer et supprimer des utilisateurs dans PostgreSQL. De plus, faites attention lorsque vous supprimez des utilisateurs, car cela peut affecter l'accès aux bases de données et aux tables.
+**Supprimer un utilisateur, `DROP USER` :**
+```sql
+DROP USER nom_utilisateur;
+```
+
+**Voir les utilisateurs :**
+```sql
+\du
+```
 
 ---
 
+## Type de données SQL
+
+### Types Numériques :
+
+- **`INT`** : Type de données pour les nombres entiers, représentant des valeurs entières dans une plage spécifique. En général, il utilise 4 octets de stockage.
+- **`NUMERIC`** : Utilisé pour stocker des nombres décimaux ou à virgule flottante avec une précision arbitraire. Ce type est idéal pour des calculs précis impliquant des décimales.
+- **`SERIAL`** : Un type spécial dans PostgreSQL qui est généralement utilisé pour créer des colonnes d'identité auto-incrémentées. En interne, il crée une séquence associée à la colonne.
+
+### Types Chaînes de Caractères :
+
+- **`CHAR`** : Utilisé pour stocker des chaînes de longueur fixe. Il remplit les espaces vides à droite si la chaîne est plus courte que la longueur spécifiée.
+- **`VARCHAR`** : Type de données pour les chaînes de longueur variable. Il stocke les données de manière plus efficiente que `CHAR` en utilisant uniquement l'espace nécessaire pour la chaîne.
+- **`TEXT`** : Utilisé pour stocker de grandes quantités de texte. Il n'a pas de limite de longueur spécifique (ou a une limite très élevée) et est souvent utilisé pour des contenus textuels volumineux.
+
+### Types Dates :
+
+- **`TIME`** : Stocke des informations sur l'heure du jour, sans tenir compte de la date. Il peut inclure des heures, minutes, secondes et fractions de seconde.
+- **`DATE`** : Utilisé pour stocker des dates, sans tenir compte de l'heure. Stocke l'année, le mois et le jour.
+- **`TIMESTAMP`** : Permet de stocker à la fois la date et l'heure précise.
+
+### Autres :
+
+- **`BOOLEAN`** : Utilisé pour stocker des valeurs booléennes (`true` ou `false`). Il représente la logique binaire et est souvent utilisé pour les expressions conditionnelles.
+
+---
