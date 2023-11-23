@@ -11,9 +11,9 @@
 ---
 
 ## SQL
-- [PostgreSQL Documentation](#postgresql-documentation)
-- [PG CLI Documentation](#pg-cli-documentation)
-- [SQL Bolt Exercises](#sql-bolt-exercises)
+- [PostgreSQL Cheat Sheet](Sql/postgreSQL-sheet-cheat.md)
+- [PG CLI Cheat Sheet](Sql/pgcli-sheet-cheat.md)
+- [SQL Bolt Exercises](Sql/sqlbolt-exo.md)
 
 ---
 
