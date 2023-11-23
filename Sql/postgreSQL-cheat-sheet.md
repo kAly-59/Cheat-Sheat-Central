@@ -1,4 +1,4 @@
-# PostgreSQL
+# PostgreSQL Cheat Sheet
 
 ## Installation de PostgreSQL sur Ubuntu
 
