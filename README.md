@@ -12,7 +12,7 @@
 
 ## SQL
 - [PostgreSQL Cheat Sheet](Sql/postgreSQL-sheet-cheat.md)
-- [PG CLI Cheat Sheet](Sql/pgcli-cheat-sheet.mdd)
+- [PG CLI Cheat Sheet](Sql/pgcli-cheat-sheet.md)
 - [SQL Bolt Exercises](Sql/sqlbolt-exo.md)
 
 ---
