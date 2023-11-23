@@ -1,4 +1,4 @@
-# EXO SQL
+# SQL Bolt (Exercices)
 
 ## EXO 1:
 1- Find the title of each film:
