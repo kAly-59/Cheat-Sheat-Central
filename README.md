@@ -18,7 +18,7 @@
 ---
 
 ## Linux Terminal
-- [Linux Terminal Cheat Sheet](#linux-terminal-cheat-sheet)
+- [Linux Terminal Cheat Sheet](LinuxTerminal/terminal-cheat-sheet.md)
 
 ---
 
