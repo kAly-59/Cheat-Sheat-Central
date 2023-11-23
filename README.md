@@ -3,7 +3,7 @@
 ---
 
 ## Git
-- [Git Cheat Sheet](\git\github-sheet-cheat.md)
+- [Git Cheat Sheet](/git/github-sheet-cheat.md)
 - [GitFlow Cheat Sheet](#git-flow-cheat-sheet.md)
 - [GitHub CLI Cheat Sheet](#git-hub-cli-cheat-sheet.md)
 - [GitHub SSH Cheat Sheet](#git-hub-ssh-cheat-sheet.mdd)
