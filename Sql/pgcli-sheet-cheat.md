@@ -1,6 +1,6 @@
 # PG CLI
 
-## Installation :
+## Installation
 
 ### Assurez-vous que `pip` est installé :
 Si vous n'avez pas encore installé `pip`, vous pouvez le faire en exécutant la commande suivante dans votre terminal :
