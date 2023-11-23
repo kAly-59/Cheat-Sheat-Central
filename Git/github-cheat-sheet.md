@@ -1,4 +1,4 @@
-# GIT Sheat Cheat
+# GIT Cheat Sheet
 
 ## Installation Git
 
