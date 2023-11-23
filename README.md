@@ -6,7 +6,7 @@
 - [Git Cheat Sheet](Git/github-cheat-sheet.md)
 - [GitFlow Cheat Sheet](Git/git-flow-cheat-sheet.md)
 - [GitHub CLI Cheat Sheet](Git/git-hub-cli-cheat-sheet.md)
-- [GitHub SSH Cheat Sheet](Git/git-hub-ssh-cheat-sheet.mdd)
+- [GitHub SSH Cheat Sheet](Git/git-hub-ssh-cheat-sheet.md)
 
 ---
 
