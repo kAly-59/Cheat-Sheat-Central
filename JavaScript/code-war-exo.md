@@ -11,8 +11,7 @@ function evenOrOdd(number) {
 }
 ```
 
-### 2. Multiply
-```javascript
+//2. Multiply
 function multiply(a, b) {
     return a * b
 }
@@ -1142,13 +1141,14 @@ const areaOrPerimeter = function (l, w) {
         return 2 * (l + w);
     };
 }
-```
 
-Certainly! Here's your JavaScript code formatted in Markdown:
-
-### 97. Reversed Words
-
-```javascript
+<<<<<<< HEAD
+//95. Invalid Login - Bug Fixing #11
+function validate(username, password) {
+    if(password.indexOf('||') > -1 || password.indexOf('//') > -1) return 'Wrong username or password!';
+    return new Database().login(username, password);
+=======
+//97. Reversed Words
 function reverseWords(str) {
     let test = '';
     test = str.split(' ');
@@ -1283,5 +1283,7 @@ function getCount(str) {
 ```javascript
 function disemvowel(str) { 
     return str.replace(/[aeiouAEIOU]/g, '');
-}
-```
+>>>>>>> a6252376a80fa2b7534778c8d7780dff90059b93
+  }
+
+//96. 
