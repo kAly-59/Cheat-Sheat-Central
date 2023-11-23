@@ -1,4 +1,4 @@
-# Terminal Linux Sheat Cheat
+# Terminal Linux Cheat Sheet
 
 - [Raccourcis de Navigation](#raccourcis-de-navigation)
 - [Raccourcis de Copie/Coller](#raccourcis-de-copiecoller)
