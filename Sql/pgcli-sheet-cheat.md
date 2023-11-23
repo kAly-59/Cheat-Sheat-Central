@@ -1,4 +1,4 @@
-# Installation `pgcli` :
+# PG CLI
 
 ## Installation :
 
