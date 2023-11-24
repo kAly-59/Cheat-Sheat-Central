@@ -26,6 +26,12 @@ sudo service postgresql start
 ```bash 
 sudo -u postgres psql
 ```
+**Pour se connectez avec un utilisateur spécifique, à une bdd spécifique**
+
+```bash
+psql -U VOTRE_UTILISATEUR -d NOM_DE_LA_BASE_DE_DONNEES
+```
+
 
 **Vous verrez votre ligne de commande changer pour ressembler à ceci :** 
 ```sql
@@ -35,6 +41,11 @@ postgres=#
 **L'utilisateur admin par défaut, postgres, a besoin d'un mot de passe assigné pour se connecter à une base de données. Pour définir un mot de passe :** 
 ```sql
 \password postgres
+```
+
+**Voir vos tables :**
+```sql
+\d+
 ```
 
 <br>
