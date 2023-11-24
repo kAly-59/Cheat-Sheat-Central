@@ -20,7 +20,7 @@ pgcli -h <hôte> -U <utilisateur> -d <base_de_données>
 
 **Version :**
 ```bash
-psql --version
+pgcli --version
 ```
 
 <br>
