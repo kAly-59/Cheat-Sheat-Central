@@ -28,13 +28,24 @@ pgcli -h <hôte> -U <utilisateur> -d <base_de_données>
 ## Exportation & Importation
 
 **Exportation**
+***CLI***
 ```sql
 \! pg_dump -U nom_utilisateur -d nom_base_de_données > backup.sql
 ```
+***SQL***
+```bash
+pg_dump -U nom_utilisateur -d nom_base_de_données > backup.sql
+```
 
 **Importation**
+***CLI***
 ```sql
 \! pg_restore -U nom_utilisateur -d nom_base_de_données < backup.sql
+```
+
+***SQL***
+```bash
+psql -U kaly -d au_bon_deal < backup.sql
 ```
 
 ## Extension
