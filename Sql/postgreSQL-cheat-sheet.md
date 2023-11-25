@@ -34,37 +34,12 @@ sudo -u postgres psql
 psql -U VOTRE_UTILISATEUR -d NOM_DE_LA_BASE_DE_DONNEES
 ```
 
-**Accordez le statut de superutilisateur à un rôle :**
-``sql
-ALTER ROLE <utilisateur> WITH SUPERUSER;
-``
-
-**L'utilisateur admin par défaut, postgres, a besoin d'un mot de passe assigné pour se connecter à une base de données. Pour définir un mot de passe :** 
-```sql
-\password postgres
-```
-
-**Pour se connectez avec un utilisateur spécifique, à une bdd spécifique**
-
-```bash
-psql -U VOTRE_UTILISATEUR -d NOM_DE_LA_BASE_DE_DONNEES
-```
-
-
 **Vous verrez votre ligne de commande changer pour ressembler à ceci :** 
 ```sql
 postgres=#
 ```
 
-**L'utilisateur admin par défaut, postgres, a besoin d'un mot de passe assigné pour se connecter à une base de données. Pour définir un mot de passe :** 
-```sql
-\password postgres
-```
 
-**Voir vos tables :**
-```sql
-\d+
-```
 
 <br>
 
@@ -72,7 +47,9 @@ postgres=#
 
 <br>
 
-## Création & suppression base de données
+## Création & suppression & modification base de données
+
+### BDD
 
 **Créer une nouvelle base de données, entrez :**
 ```sql
@@ -89,13 +66,37 @@ DROP DATABASE nom_de_la_base_de_donnees;
 \l
 ```
 
+**Importer Fichier SQL :**
+```sql
+\i <nom_fichier.sql>
+```
+
+### Table
+
+***Creation Table (Exemple) :***
+```sql
+CREATE TABLE mock_data (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(50),
+    gender VARCHAR(50),
+    ip_address VARCHAR(15)
+);
+```
+
+**Voir vos tables :**
+```sql
+\d+
+```
+
 <br>
 
 ---
 
 <br>
 
-## Création & suppression compte utilisateur
+## Création & suppression & modification d'utilisateur
 
 **Créer un nouvel utilisateur, `CREATE USER` :**
 ```sql
@@ -107,12 +108,26 @@ CREATE USER nom_utilisateur WITH PASSWORD 'mot_de_passe';
 DROP USER nom_utilisateur;
 ```
 
+**Accordez le statut de superutilisateur à un rôle :**
+```sql
+ALTER ROLE <utilisateur> WITH SUPERUSER;
+```
+
+**L'utilisateur admin par défaut, postgres, a besoin d'un mot de passe assigné pour se connecter à une base de données. Pour définir un mot de passe :** 
+```sql
+\password postgres
+```
+
 **Voir les utilisateurs :**
 ```sql
 \du
 ```
 
+<br>
+
 ---
+
+<br>
 
 ## Type de données SQL
 
@@ -138,4 +153,8 @@ DROP USER nom_utilisateur;
 
 - **`BOOLEAN`** : Utilisé pour stocker des valeurs booléennes (`true` ou `false`). Il représente la logique binaire et est souvent utilisé pour les expressions conditionnelles.
 
+<br>
+
 ---
+
+<br>
