@@ -25,6 +25,29 @@ pgcli --version
 pgcli -h <hôte> -U <utilisateur> -d <base_de_données>
 ```
 
+## Exportation & Importation
+
+**Exportation**
+```sql
+\! pg_dump -U nom_utilisateur -d nom_base_de_données > backup.sql
+```
+
+**Importation**
+```sql
+\! pg_restore -U nom_utilisateur -d nom_base_de_données < backup.sql
+```
+
+## Extension
+
+**uuid-ossp**
+```sql
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+```
+**Vérifiez la disponibilité de la fonction uuid_generate_v4()**
+```sql
+SELECT uuid_generate_v4();
+```
+
 <br>
 
 ***
