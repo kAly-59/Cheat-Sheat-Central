@@ -22,10 +22,21 @@ psql --version
 sudo service postgresql start
 ```
 
-**Connectez-vous au service postgres et ouvrez le shell psql :**
+**Connexion à PostgreSQL en tant qu'utilisateur superutilisateur (postgres par défaut) :**
 ```bash 
 sudo -u postgres psql
 ```
+
+**Accordez le statut de superutilisateur à un rôle :**
+``sql
+ALTER ROLE <utilisateur> WITH SUPERUSER;
+``
+
+**L'utilisateur admin par défaut, postgres, a besoin d'un mot de passe assigné pour se connecter à une base de données. Pour définir un mot de passe :** 
+```sql
+\password postgres
+```
+
 **Pour se connectez avec un utilisateur spécifique, à une bdd spécifique**
 
 ```bash
