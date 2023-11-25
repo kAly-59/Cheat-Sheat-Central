@@ -15,6 +15,7 @@ sudo apt install postgresql postgresql-contrib
 psql --version
 ```
 
+## Initialisation
 ***Chaque fois que vous redémarrez votre machine, vous devrez également redémarrer le service postgres.***
 
 **Démarrez votre service postgres :** 
@@ -25,6 +26,12 @@ sudo service postgresql start
 **Connexion à PostgreSQL en tant qu'utilisateur superutilisateur (postgres par défaut) :**
 ```bash 
 sudo -u postgres psql
+```
+
+**Pour se connectez avec un utilisateur spécifique, à une bdd spécifique**
+
+```bash
+psql -U VOTRE_UTILISATEUR -d NOM_DE_LA_BASE_DE_DONNEES
 ```
 
 **Accordez le statut de superutilisateur à un rôle :**
