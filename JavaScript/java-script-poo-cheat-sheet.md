@@ -1,8 +1,6 @@
 # Concepts fondamentaux de la POO en JavaScript :
 
 - **Objets** : Instances de classes, contenant des attributs et des méthodes.
-
-  Exemple :
   ```javascript
   // Définition d'une classe (fonction constructeur)
   function Voiture(marque, couleur) {
