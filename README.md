@@ -19,12 +19,14 @@
 ## Java Script
 - [Java Script Cheat Sheet](JavaScript/java-script-poo-cheat-sheet.md)
 ### Node JS
-- [Node JS Cheat Sheet Cheat Sheet](JavaScript/node-js/node-js-cheat-sheet.md)
-- [NPM Cheat Sheet Cheat Sheet](JavaScript/node-js/npm-ubuntu-cheat-sheet.md)
+- [Node JS Cheat Sheet](JavaScript/node-js/node-js-cheat-sheet.md)
+- [NPM Cheat Sheet](JavaScript/node-js/npm-ubuntu-cheat-sheet.md)
 ---
 
 ## API
 - [API Cheat Sheet](Api/api-cheat-sheet.md)
+- [API DOC](Api/api-doc.md)
+
  
 ---
 
