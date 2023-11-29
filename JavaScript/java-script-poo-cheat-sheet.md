@@ -1,4 +1,6 @@
-# Concepts fondamentaux de la POO en JavaScript :
+# JavaScript
+
+## POO en JavaScript
 
 - **Objets** : Instances de classes, contenant des attributs et des méthodes.
   ```javascript
