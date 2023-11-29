@@ -1,4 +1,4 @@
- # Cheat Sheet npm (Ubuntu)
+ # NPM (Ubuntu)
 
 ## Gestion des Paquets
 ### Installer un package local/global
