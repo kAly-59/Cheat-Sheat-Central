@@ -1,34 +1,33 @@
  # Cheat Sheet npm (Ubuntu)
 
 ## Gestion des Paquets
-### Installer un package localement
+### Installer un package local/global
 ```bash
 npm install <package_name>
 ```
-
-### Installer un package globalement
 ```bash
 npm install -g <package_name>
 ```
-
-### Mettre à jour un package spécifique
-```bash
-npm update <package_name>
-```
-
-### Mettre à jour tous les packages
+### Mettre à jour packages
 ```bash
 npm update
 ```
-
-### Supprimer un package localement
+```bash
+npm update <package_name> #package spécifique
+```
+### Supprimer un package local/global
 ```bash
 npm uninstall <package_name>
 ```
-
-### Supprimer un package global
 ```bash
 npm uninstall -g <package_name>
+```
+### Voir les packages installés local/global
+```bash
+npm list 
+```
+```bash
+npm list -g
 ```
 
 ---
@@ -38,35 +37,9 @@ npm uninstall -g <package_name>
 ```bash
 npm init
 ```
-
 ### Exécuter un script spécifique
-
 ```bash
 npm run <script_name>
-```
-
-### Installer uniquement les dépendances de production
-
-```bash
-npm install --only=prod
-```
-
----
-
-## Autres Commandes Utiles
-### Voir les packages installés localement
-```bash
-npm list
-```
-
-### Voir les packages installés globalement
-```bash
-npm list -g
-```
-
-### Obtenir de l'aide sur une commande spécifique
-```bash
-npm <command> --help
 ```
 
 ---
