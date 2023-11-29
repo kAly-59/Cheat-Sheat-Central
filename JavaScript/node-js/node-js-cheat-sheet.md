@@ -1,6 +1,6 @@
-## Node.js Installation (Version LTS 20.10.0)
+# Node.js Installation (Version LTS 20.10.0)
 
-### Utilisation de Node Version Manager (NVM)
+## Node Version Manager (NVM)
 - Installation de Node Version Manager (NVM) :
   ```bash
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
